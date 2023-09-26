@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:widgets_app/config/menu/menu_items.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -10,7 +11,7 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Fluttter + material widgets'),
       ),
-      body: _HomeView(),
+      body: const _HomeView(),
     );
   }
 }
@@ -38,16 +39,21 @@ class _CustomListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     final colors = Theme.of(context).colorScheme;
 
     return ListTile(
-      leading: Icon(menuItem.icon, color: colors.primary,),
+      leading: Icon(
+        menuItem.icon,
+        color: colors.primary,
+      ),
       title: Text(menuItem.title),
       subtitle: Text(menuItem.subtitle),
-      trailing: Icon(Icons.arrow_forward_ios_rounded, color: colors.primary,),
-      onTap: (){
-        // TODO: navegar a otra pantalla
+      trailing: Icon(
+        Icons.arrow_forward_ios_rounded,
+        color: colors.primary,
+      ),
+      onTap: () {
+        context.push(menuItem.link);
       },
     );
   }
