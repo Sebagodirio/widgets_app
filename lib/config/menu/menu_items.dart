@@ -17,4 +17,5 @@ const appMenuItems = <MenuItem>[
   MenuItem(title: 'Animated container', subtitle: 'Statefull widget animado', link: '/animated', icon: Icons.check_box_outline_blank),
   MenuItem(title: 'UI controls + times', subtitle: 'Una serie de controles de flutter', link: '/ui-controls', icon: Icons.car_crash_rounded),
   MenuItem(title: 'Introduccion a la aplicacion', subtitle: 'Turorial de bienvenida', link: '/tutorial', icon: Icons.trending_up_outlined),
+  MenuItem(title: 'Infinite scroll y Pull', subtitle: 'Listas infinitas y pull to refresh', link: '/infinite', icon: Icons.list_alt_sharp),
 ];
